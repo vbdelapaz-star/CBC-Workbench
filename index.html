@@ -1607,7 +1607,7 @@
 
         downloadMarkdown(curr) {
           const mdContent = this.generateMarkdownContent(curr);
-          const safeTitle = curr.code.replace(/[^a-[0-9]/gi, '_') + '_' + curr.title.replace(/[^a-z0-9]/gi, '_');
+          const safeTitle = curr.code.replace(/[^a-z0-9]/gi, '_') + '_' + curr.title.replace(/[^a-z0-9]/gi, '_');
           this.downloadFile(`${safeTitle}.md`, mdContent, 'text/markdown');
           this.showToast('Markdown Exported', `Saved ${safeTitle}.md locally`);
         },
